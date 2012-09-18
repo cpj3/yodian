@@ -1,0 +1,10 @@
+*.swp
+*.pyc
+*.bak
+*~
+~*
+*Thumbs.db
+*.tar.gz
+*.svn
+logs/*
+news_temp.html
