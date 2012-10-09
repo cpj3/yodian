@@ -50,4 +50,8 @@
 	  |
 	  ———— index.php (前台入口文件)
 
-11. 安装参照 http://www.dilicms.com/#installation (注：db.sql在resources文件夹中)
+11. 安装步骤：
+   
+    (1).新建数据库，并导入db.sql , 注：db.sql在resources文件夹中
+    (2).配置application和manage文件夹下的/config/database.php
+    (3).运行http://your-url/manage/index.php/initialize,初始化系统
