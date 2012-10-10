@@ -2,7 +2,7 @@
 <html lang="zh-cn">
 <head>
 	<meta charset="utf-8">
-	<title>欢迎使用DiliCMS</title>
+	<title>yodian CMS</title>
 
 	<style type="text/css">
 
@@ -67,20 +67,31 @@
 <body>
 
 <div id="container">
-	<h1>欢迎使用DiliCMS!</h1>
+	<h1><?=$site->site_name?></h1>
 
 	<div id="body">
 
-		<p>安装教程</p>
-		<code><a href="http://www.dilicms.com/#installation" target="_blank">http://www.dilicms.com/#installation</a></code>
-
-		<p>默认帐号和密码</p>
-		<code>帐号:admin/密码:dilicms</code>
-
-		<p>QQ讨论群</p>
-		<code>185074106</code>
-
-		<p>如果您是第一次使用DiliCMS或者有任何疑问, 请到<a target="_blank" href="http://codeigniter.org.cn/forums/forum-dilicms-1.html">DiliCMS讨论区</a>或QQ群进行讨论资讯.</p>
+		<p>主导航</p>
+		<div class="nav">
+			<ul>
+				<?php
+		          foreach ($main_nav as $row){
+		          echo "<li>".anchor($row->nav_url,$row->nav_label)."</li>";
+		          }
+		        ?>
+			</ul>
+		</div>
+		
+		<p>友情链接</p>
+		<div class="nav">
+			<ul>
+				<?php
+		          foreach ($flinks as $row){
+		          echo "<li>".anchor($row->nav_url,$row->nav_label)."</li>";
+		          }
+		        ?>
+			</ul>
+		</div>
 	</div>
 
 	<p class="footer">页面渲染时间 <strong>{elapsed_time}</strong> 秒.</p>
